@@ -12,7 +12,7 @@ while True:
     ret, im =cam.read()
     gray=cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
     faces=faceCascade.detectMultiScale(gray, 1.2,5)
-    for(x,y,w,h) in faces:
+    
         Id, conf = recognizer.predict(gray[y:y+h,x:x+w])
 
         # # else:
